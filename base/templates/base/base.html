@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Danny Zou</title>
-    </head>
-    <body>
-        <nav>
-            {% include 'base/navbar.html' %}
-        </nav>
-
-        {% block content %}
-        <!-- Content goes here -->
-        {% endblock %}
-    </body>
+<head>
+    <title>Danny Zou</title>
+</head>
+<body>
+    
+    <div class="container">
+    {% block content %}
+    <!-- Content goes here -->
+    {% endblock %}
+    </div>
+   
+</body>
 </html>

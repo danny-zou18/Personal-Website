@@ -5,13 +5,13 @@ def home(request):
     return render(request, 'base/home.html')
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'base/about.html')
 
 def socials(request):
-    return render(request, 'socials.html')
+    return render(request, 'base/socials.html')
 
 def contact(request):
-    return render(request, "contact.html")
+    return render(request, "base/contact.html")
 
 def portfolio(request):
-    return render(request, "portfolio.html")
+    return render(request, "base/portfolio.html")
