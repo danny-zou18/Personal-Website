@@ -10,6 +10,7 @@ body {
   padding: 0;
   background-color: #24252a;
   max-height: 100px;
+  border-bottom: 5px groove red;
 }
 
 li,
@@ -34,7 +35,7 @@ header {
   height: auto;
   cursor: pointer;
   margin-right: auto;
-  margin-left: -100px;
+  margin-left: -150px;
 }
 
 .nav_links{
@@ -61,7 +62,7 @@ button {
     cursor:pointer;
     transition: all 0.3s ease 0s;
     margin-left: 25px;
-    margin-right: -100px;
+    margin-right: -150px;
 }
 
 button:hover {
