@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Danny Zou</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}" />
+  </head>
+  <body>
+    <div class="navbar">
+      <header>
+        <img class="logo" src="{% static 'images/logo.png' %}" alt="logo" />
+        <nav>
+          <ul class="nav_links">
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'about' %}">Socials</a></li>
+            <li><a href="{% url 'about' %}">Portfolio</a></li>
+          </ul>
+        </nav>
+        <a class="cta" href="{% url 'contact' %}"
+          ><button>Contact Me</button></a>
+      </header>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
