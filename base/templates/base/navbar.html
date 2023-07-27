@@ -1,7 +1,19 @@
 {% load static %}
 
 <div class="navbar">
-    <nav>
-        
-    </nav>
-</div>
+    <header>
+      <div class="logo">
+        <img src="{% static 'images/me.png' %}" alt="logo">
+        <h3>Danny Z.</h3>
+      </div>  
+      <nav>
+        <ul class="nav_links">
+          <li><a href="{% url 'home' %}">HOME</a></li>  
+          <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+          <li><a href="{% url 'about' %}">ABOUT</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="{% url 'contact' %}"
+        ><button>Contact Me</button></a>
+    </header>   
+  </div>
