@@ -1,5 +1,8 @@
 {% load static %}
 
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nav-style.css' %}">
+</head>
 <div class="navbar">
     <header>
       <div class="logo">
@@ -8,9 +11,9 @@
       </div>  
       <nav>
         <ul class="nav_links">
-          <li><a href="{% url 'home' %}">HOME</a></li>  
-          <li><a href="{% url 'portfolio' %}">PORTFOLIO</a></li>
-          <li><a href="{% url 'about' %}">ABOUT</a></li>
+          <li><a class="home" href="{% url 'home' %}">HOME</a></li>  
+          <li><a class="portfolio" href="{% url 'portfolio' %}">PORTFOLIO</a></li>
+          <li><a class="about" href="{% url 'about' %}">ABOUT</a></li>
         </ul>
       </nav>
       <a class="cta" href="{% url 'contact' %}"

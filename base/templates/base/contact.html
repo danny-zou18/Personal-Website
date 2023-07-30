@@ -1,5 +1,53 @@
-{% extends 'base/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/contact-style.css' %}"
+    />
+  </head>
+  <body>
+    {% include 'base/navbar.html' %}
+    <div class="box">
+        <span class="border-line"></span>
+      <form method="post">
+        <h1>Contact Me</h1>
+        {% csrf_token %}
+        <div class="input-box" for="name">
+          <input id="name" name="name" type="text" required />
+          <span>Full Name</span>
+          <i></i>
+        </div>
+        <div class="input-box" for="email">
+          <input id="email" name="email" type="email" required />
+          <span>Email</span>
+          <i></i>
+        </div>
+        <div class="input-box" for="subject">
+          <input id="subject" name="subject" type="text" required />
+          <span>Subject</span>
+          <i></i>
+        </div>
+        <div class="input-box" for="message">
+          <textarea
+            id="message"
+            name="message"
+            rows="3"
+            cols="30"
+            placeholder="Enter your Message here..."
+          ></textarea>
+        </div>
 
-{% block content %}
-<h1>Contact Page</h1>
-{% endblock %}
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script src="" async defer></script>
+  </body>
+</html>
