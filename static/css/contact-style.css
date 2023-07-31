@@ -26,7 +26,7 @@ h1 {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
+  margin-top: 3vh;
   min-height: 82vh;
   position: relative;
   background: #1c1c1c;
@@ -117,14 +117,15 @@ h1 {
 .box h1 {
   color: #fff;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 4vh;
+  margin-top: 2vh;
   letter-spacing: 3px;
 }
 
 .box form .input-box {
   position: relative;
   width: 500px;
-  margin-bottom: 40px;
+  margin-bottom: 8vh;
 }
 .box form .input-box input {
   position: relative;
@@ -154,7 +155,7 @@ h1 {
   border: 2px dashed rgb(103, 94, 94);
   border-radius: 6px;
   margin-top: 5px;
-  margin-bottom: -23px;
+  margin-bottom: -3.5vh;
   text-indent: 10px;
   line-height: 30px;
 }
