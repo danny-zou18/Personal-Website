@@ -13,6 +13,10 @@ body {
 }
 .intro {
   display: flex;
+  width:100%;
+  justify-content: center;
+  height: 70vh;
+  align-items: center;
 }
 
 .content {
@@ -23,7 +27,6 @@ body {
   font-size: 16px;
   padding: 0 7%;
   max-width: 800px;
-  margin-left: 10px;
 }
 
 .content h1 {
@@ -42,11 +45,11 @@ body {
 }
 
 .prof-pic {
-  width: 75%;
   height: auto;
-  margin-top: 80px;
-  margin-left: 80px;
+  margin-top: 80px; 
   opacity: 80%;
+  max-width: 100%;
+
 }
 .socials {
   margin-top: 25px;
