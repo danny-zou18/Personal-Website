@@ -22,26 +22,26 @@ body {
 .content {
   display: block;
   color: white;
-  margin-top: 12vh;
+  margin-top: 10vh;
   font-family: "Poppins", sans-serif;
-  font-size: 1vw;
+  font-size: 16px;
   padding: 0 7%;
-  max-width: 60%;
-  margin-left: -12vh;
+  max-width: 800px;
+  margin-left: -10vh;
 }
 
 .content h1 {
   font-weight: 700;
-  margin-bottom: 1vh;
-  font-size: 2vw;
+  margin-bottom: 5px;
+  font-size: 40px;
 }
 .content h3 {
   font-weight: 600;
-  margin-bottom: 1vh;
+  margin-bottom: 5px;
   color: rgb(242, 120, 120);
 }
 .content p {
-  max-width:75%;
+  max-width: 550px;
   line-height: 2;
 }
 
@@ -50,7 +50,7 @@ body {
   margin-top: 80px; 
   opacity: 80%;
   max-width: 100%;
-  margin-left: 5vh;
+
 }
 .socials {
   margin-top: 25px;
