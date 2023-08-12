@@ -8,13 +8,76 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio-style.css' %}">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
     </head>
     <body>
         {% include 'base/navbar.html' %}
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class="buttons" id="buttons">
+            <button class="btn active" id="work">Work</button>
+            <button class="btn" id="personal">Personal Projects</button>
+            <button class="btn" id="hackathons">Hackathons</button>
+            <button class="btn" id="tech">Technologies</button>
+        </div>
+        <div class="divs work" id="div1" for="work">
+        </div>
+        <div class="divs personal current" id="div2" for="personal">
+            <div class="work-content" id="first-personal">
+                <div class="card-wrapper">
+                    <div class="card">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="{% static 'images/cat.png' %}" alt="pic" class="card-img">
+                        </div>
+                        <div class="card-content">
+                            <h2>Personal Website</h2>
+                            <p>What you are currently on right now. The first website that I made to display my Portfolio and help you get to know me a little better. Made using Django, HTML, CSS, and Javascript </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal" for="first-personal">
+                <div class="modal-images">
+                    <i class="bx bx-chevron-left"></i>
+                    <ul class="carousel">
+                        <li class="img">
+                                <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        </li>
+                        <li class="img" >
+                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+
+                        </li>
+                        <li class="img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+
+                        </li>
+                        <li class="img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+
+                        </li>
+                        <li class="img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        </li>
+                    </ul>
+                    <i class="bx bx-chevron-right"></i>
+                </div>
+                <!-- <div class="technologies">
+                        <h1>What was Used</h1>
+                        <ul>
+                            <li><p>Python</p></li>
+                            <li><p>Django</p></li>
+                            <li><p>HTML</p></li>
+                            <li><p>CSS</p></li>
+                            <li><p>JavaScript</p></li>
+                        </ul>
+                    </div> -->
+            </div>
+        </div>
+        <div class="divs hackathons" id="div3" for="hackathons">
+        </div>
+        <div class="divs tech" id="div4" for="tech">
+        </div>
         
-        <script src="" async defer></script>
+        <script src="{% static 'js/portfolio.js' %}" async defer></script>
+        <script src="{% static 'js/portfolio2.js' %}" async defer></script>
     </body>
 </html>

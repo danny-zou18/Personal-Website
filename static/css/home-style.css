@@ -18,6 +18,9 @@ body {
   height: 70vh;
   align-items: center;
 }
+.navbar .home {
+  color:rgb(242, 120, 120);
+}
 
 .content {
   display: block;
@@ -47,10 +50,9 @@ body {
 
 .prof-pic {
   height: auto;
-  margin-top: 80px; 
   opacity: 80%;
   max-width: 100%;
-
+  margin-bottom: -13vh;
 }
 .socials {
   margin-top: 25px;

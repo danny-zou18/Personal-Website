@@ -16,3 +16,148 @@ body {
 .portfolio {
     color: rgb(242, 120, 120);
 }
+/* For Buttons ----------------------------------------------------------- */
+.buttons {
+  display: flex;
+  position: relative  ;
+  justify-content: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding-bottom: 25px;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg,rgb(70, 70, 242), rgb(242, 122, 122));
+  border-image-slice: 10;
+  overflow: hidden;
+}
+.buttons button {
+  background-color: #2d303d;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-left: 24px;
+  border: none;
+  transition: 0.3s;
+}
+.buttons button:hover {
+  cursor: pointer;
+  color: rgb(201, 201, 244);
+}
+.active, .buttons button.active {
+  color:rgb(181, 181, 239);
+}
+
+/* For Content ----------------------------------------------------------- */
+.divs {
+  margin-top: 30px;
+  display: none;
+}
+.current {
+  display: flex;
+}
+.personal {
+  /* background-color: darkgoldenrod ; */
+  min-height: 65vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.personal .card {
+  border-radius: 25px;
+  padding: 30px;
+  min-height: 65vh;
+  max-height: 65vh;
+  max-width: 25.4vw;
+  border: 5px solid black;
+  background-color: #EFFFFF;
+}
+.personal .card-image {
+  position: relative;
+  width: 21vw;
+  height: 25vh;
+  border-radius: 25px ;
+  border: 3px solid hsl(229, 15%, 21%);
+  background: #2d303d;
+}
+.personal .card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+.personal .card-content {
+  margin-top: 10px;
+}
+.personal h2 {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.work-content:hover {
+  cursor: pointer;
+}
+
+/* For Modals ----------------------------------------------------------- */
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 74vw;
+  height: 82vh;
+  transform: translate(-50%, -50%);
+  background: red;
+  z-index: 10;
+  
+}
+.modal-images {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 41%;
+  background-color: blue;
+  padding: 0 60px;
+}
+.modal-images i {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  z-index: 20;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+}
+.modal-images i:first-child {
+  left: 25px;
+}
+.modal-images i:last-child {
+  right: 25px;
+
+}
+.modal-images .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100%/3)-12px);
+  gap: 13px;
+  overflow: hidden;
+}
+.carousel .img {
+  list-style: none;
+  width:21.3vw;
+  height:28vh;
+}
+.img img {
+  width:100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+

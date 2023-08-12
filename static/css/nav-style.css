@@ -11,6 +11,7 @@ button {
   font-size: 17px;
   color: #edf0f1;
   text-decoration: none;
+  z-index: 10;
 }
 
 header {
@@ -58,7 +59,7 @@ header {
   color: rgb(242, 120, 120);
 }
 
-button {
+.navbar button {
   position: relative;
   padding: 9px 25px;
   background: transparent;
@@ -70,10 +71,10 @@ button {
   margin-right: -50px;
   overflow: hidden;
 }
-button:hover {
+.navbar button:hover {
   color: #2d303d;
 }
-button::before {
+.navbar button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -84,6 +85,6 @@ button::before {
   z-index: -1;
   transition: 0.5s;
 }
-button:hover::before {
+.navbar button:hover::before {
   width: 100%;
 }
