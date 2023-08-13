@@ -24,7 +24,7 @@
             <div class="work-content" id="first-personal">
                 <div class="card-wrapper">
                     <div class="card">
-                        <span class="overlay"></span>
+                        <span class="card-overlay"></span>
                         <div class="card-image">
                             <img src="{% static 'images/cat.png' %}" alt="pic" class="card-img">
                         </div>
@@ -35,30 +35,30 @@
                     </div>
                 </div>
             </div>
-            <div class="modal" id="modal" for="first-personal">
+            <div class="modal" id="modal-first-personal" for="first-personal">
+                <button class="close-button" id="close-first-personal"><i class="bx bx-x"></i></button>
                 <div class="modal-images">
-                    <i class="bx bx-chevron-left"></i>
+                    <i id="left" class="bx bx-chevron-left"></i>
                     <ul class="carousel">
-                        <li class="img">
-                                <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        <li class="modal-img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false" >
                         </li>
-                        <li class="img" >
-                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        <li class="modal-img" >
+                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
+                        </li>
+                        <li class="modal-img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
 
                         </li>
-                        <li class="img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        <li class="modal-img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
 
                         </li>
-                        <li class="img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat">
-
-                        </li>
-                        <li class="img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat">
+                        <li class="modal-img">
+                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
                         </li>
                     </ul>
-                    <i class="bx bx-chevron-right"></i>
+                    <i id="right" class="bx bx-chevron-right"></i>
                 </div>
                 <!-- <div class="technologies">
                         <h1>What was Used</h1>
@@ -76,8 +76,10 @@
         </div>
         <div class="divs tech" id="div4" for="tech">
         </div>
+
+        <div class="modal-overlay" id="modal-overlay"></div>
         
         <script src="{% static 'js/portfolio.js' %}" async defer></script>
-        <script src="{% static 'js/portfolio2.js' %}" async defer></script>
+        <!-- <script src="{% static 'js/portfolio-image-scroller.js' %}" async defer></script> -->
     </body>
 </html>

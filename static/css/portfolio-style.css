@@ -16,6 +16,7 @@ body {
 .portfolio {
     color: rgb(242, 120, 120);
 }
+
 /* For Buttons ----------------------------------------------------------- */
 .buttons {
   display: flex;
@@ -101,15 +102,17 @@ body {
 /* For Modals ----------------------------------------------------------- */
 
 .modal {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   width: 74vw;
   height: 82vh;
   transform: translate(-50%, -50%);
-  background: red;
+  background: #6d7575;
   z-index: 10;
-  
+  border-radius: 35px 8px 35px 35px;
+  overflow: hidden;
 }
 .modal-images {
   padding: 0;
@@ -119,14 +122,30 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 41%;
-  background-color: blue;
+  background-color: rgb(154, 154, 130);
   padding: 0 60px;
+}
+.modal .close-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 13px;
+  top: 12px;
+  max-height: 35px;
+  max-width: 35px;
+  height: auto;
+  color: black;
+  font-size: 50px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 .modal-images i {
   position: absolute;
   width: 45px;
   height: 45px;
-  background-color: white;
+  background-color: rgb(184, 184, 127);
   text-align: center;
   line-height: 45px;
   border-radius: 50%;
@@ -145,18 +164,33 @@ body {
 .modal-images .carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100%/3));
-  gap: 5px;
-  overflow: hidden;
+  grid-auto-columns: calc((100%/3) - 8px);
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
 }
-.carousel .img {
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.dragging {
+  scroll-snap-type:none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .modal-img {
+  cursor: grab;
+  user-select: none;
+}
+.carousel .modal-img {
+  scroll-snap-align: start;
   list-style: none;
-  width:21.3vw;
   height:28vh;
-  min-height: 100%;
-  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.img img {
+.modal-img img {
   width:100%;
   height: 100%;
   border-radius: 25px;
@@ -164,8 +198,21 @@ body {
 }
 @media screen and (max-width:900px) {
   .modal-images .carousel {
-    grid-auto-columns: calc((100%/2));
+    grid-auto-columns: calc((100%/2) - 8px);
   }
 }
-
-
+@media screen and (max-width:600px) {
+  .modal-images .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.4);
+  z-index: 9;
+}
