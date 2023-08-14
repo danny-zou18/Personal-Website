@@ -13,13 +13,13 @@ body {
 }
 .intro {
   display: flex;
-  width:100%;
+  width: 100%;
   justify-content: center;
   height: 70vh;
   align-items: center;
 }
 .navbar .home {
-  color:rgb(242, 120, 120);
+  color: rgb(242, 120, 120);
 }
 
 .content {
@@ -33,17 +33,35 @@ body {
   /* max-width: 800px; */
   min-width: 40vw;
   margin-left: -10vh;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: slidein-content;
 }
-
+@keyframes slidein-content {
+  from {
+    margin-top: 50%;
+  }
+  to {
+    margin-top: 14vh;
+  }
+}
 .content h1 {
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-size: 2.5em;
 }
 .content h3 {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: rgb(242, 120, 120);
+}
+.content h3 .rpi {
+  font-size: 1.05em;
+  font-weight: 600;
+  background: linear-gradient(to right,rgb(240, 99, 99), #00abf0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .content p {
   max-width: 40vw;
@@ -55,6 +73,17 @@ body {
   opacity: 80%;
   min-width: 35vw;
   margin-bottom: -13vh;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-name: slidein-profpic;
+}
+@keyframes slidein-profpic{
+  from {
+    margin-bottom: 50%;
+  }
+  to {
+    margin-bottom: -13vh;
+  }
 }
 .socials {
   margin-top: 25px;

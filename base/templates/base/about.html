@@ -11,7 +11,19 @@
     </head>
     <body>
         {% include 'base/navbar.html' %}
-        
+        <div class="main-container">
+            <div class="image-wrapper">
+                <img src="{% static 'images/cat2.png' %}" alt="cat">
+            </div>
+            <div class="content-container">
+                <h1>ABOUT</h1>
+                <div class="buttons" id="buttons">
+                    <button class="btn active" id="about-me">About Me</button>
+                    <button class="btn" id="education">Education</button>
+                    <button class="btn" id="hobbies">Hobbies</button>
+                </div>
+            </div>
+        </div>
         <script src="" async defer></script>
     </body>
 </html>
