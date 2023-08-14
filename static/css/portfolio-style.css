@@ -14,13 +14,13 @@ body {
 }
 
 .portfolio {
-    color: rgb(242, 120, 120);
+  color: rgb(242, 120, 120);
 }
 
 /* For Buttons ----------------------------------------------------------- */
 .buttons {
   display: flex;
-  position: relative  ;
+  position: relative;
   justify-content: center;
   max-width: 800px;
   margin-left: auto;
@@ -28,7 +28,7 @@ body {
   margin-top: 40px;
   padding-bottom: 25px;
   border-bottom: 3px solid;
-  border-image: linear-gradient(90deg,rgb(70, 70, 242), rgb(242, 122, 122));
+  border-image: linear-gradient(90deg, rgb(70, 70, 242), rgb(242, 122, 122));
   border-image-slice: 10;
   overflow: hidden;
 }
@@ -45,8 +45,9 @@ body {
   cursor: pointer;
   color: rgb(201, 201, 244);
 }
-.active, .buttons button.active {
-  color:rgb(181, 181, 239);
+.active,
+.buttons button.active {
+  color: rgb(181, 181, 239);
 }
 
 /* For Content ----------------------------------------------------------- */
@@ -71,13 +72,13 @@ body {
   max-height: 65vh;
   max-width: 25.4vw;
   border: 5px solid black;
-  background-color: #EFFFFF;
+  background-color: #efffff;
 }
 .personal .card-image {
   position: relative;
   width: 21vw;
   height: 25vh;
-  border-radius: 25px ;
+  border-radius: 25px;
   border: 3px solid hsl(229, 15%, 21%);
   background: #2d303d;
 }
@@ -108,6 +109,8 @@ body {
   left: 50%;
   width: 74vw;
   height: 82vh;
+  /* width: 66.6rem;
+  height: 37rem; */
   transform: translate(-50%, -50%);
   background: #6d7575;
   z-index: 10;
@@ -124,6 +127,8 @@ body {
   min-height: 41%;
   background-color: rgb(154, 154, 130);
   padding: 0 60px;
+  border-radius: 35px 8px 35px 0;
+  border: 3px solid black;
 }
 .modal .close-button {
   position: absolute;
@@ -152,19 +157,18 @@ body {
   font-size: 1.6rem;
   cursor: pointer;
   z-index: 20;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .modal-images i:first-child {
   left: 25px;
 }
 .modal-images i:last-child {
   right: 25px;
-
 }
 .modal-images .carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100%/3) - 8px);
+  grid-auto-columns: calc((100% / 3) - 8px);
   gap: 12px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -175,7 +179,7 @@ body {
   display: none;
 }
 .carousel.dragging {
-  scroll-snap-type:none;
+  scroll-snap-type: none;
   scroll-behavior: auto;
 }
 .carousel.dragging .modal-img {
@@ -185,23 +189,23 @@ body {
 .carousel .modal-img {
   scroll-snap-align: start;
   list-style: none;
-  height:28vh;
+  height: 28vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .modal-img img {
-  width:100%;
+  width: 100%;
   height: 100%;
   border-radius: 25px;
   object-fit: cover;
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width: 900px) {
   .modal-images .carousel {
-    grid-auto-columns: calc((100%/2) - 8px);
+    grid-auto-columns: calc((100% / 2) - 8px);
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
   .modal-images .carousel {
     grid-auto-columns: 100%;
   }
@@ -209,10 +213,77 @@ body {
 .modal-overlay {
   display: none;
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 9;
+}
+.modal .modal-text-container {
+  width: 100%;
+  height: 59%;
+  display: flex;
+  flex-direction: row;
+}
+.modal .modal-text-container .technologies {
+  min-width: 35%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 0 0 0 35px;
+  border-top: none;
+}
+.modal .modal-text-container .technologies h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+.modal .modal-text-container .technologies ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+  grid-gap: 20px; /* Adjust the gap between columns */
+  padding: 0;
+  margin-left: 2vw;
+}
+.modal .modal-text-container {
+  display: flex;
+}
+.modal .modal-text-container .technologies ul li {
+  font-size: 20px;
+}
+.modal .modal-text-container .technologies a {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+  font-size: 18px;
+}
+.modal .modal-text-container .technologies a i {
+  font-size: 40px;
+  color: black;
+  margin-right: 5px;
+}
+.modal .modal-text-container .modal-description {
+  min-width: 65%;
+  min-height: 100%;
+}
+.modal .modal-text-container .modal-description h3,
+.modal .modal-text-container .modal-description p {
+  margin-left: 30px;
+}
+
+.modal .modal-text-container .modal-description h3 {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 30px;
+  border-bottom: 3px solid rgb(49, 48, 48);
+}
+
+.modal .modal-text-container .modal-description p {
+  margin-top: 15px;
+  max-width: 90%;
+  font-size: 17px;
 }

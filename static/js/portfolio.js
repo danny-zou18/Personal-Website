@@ -34,7 +34,7 @@ const close_first_personal = document.getElementById("close-first-personal");
 first_personal.addEventListener("click", () => {
   modal_first_personal.style.display = "block";
   modal_overlay.style.display = "block";
-  
+
   var carousel = document.querySelector(".carousel");
   var arrowBtns = document.querySelectorAll(".modal-images i");
   const addPixels = 12;

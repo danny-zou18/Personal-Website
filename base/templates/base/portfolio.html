@@ -1,85 +1,136 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio-style.css' %}">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
-    </head>
-    <body>
-        {% include 'base/navbar.html' %}
-        <div class="buttons" id="buttons">
-            <button class="btn active" id="work">Work</button>
-            <button class="btn" id="personal">Personal Projects</button>
-            <button class="btn" id="hackathons">Hackathons</button>
-            <button class="btn" id="tech">Technologies</button>
-        </div>
-        <div class="divs work" id="div1" for="work">
-        </div>
-        <div class="divs personal current" id="div2" for="personal">
-            <div class="work-content" id="first-personal">
-                <div class="card-wrapper">
-                    <div class="card">
-                        <span class="card-overlay"></span>
-                        <div class="card-image">
-                            <img src="{% static 'images/cat.png' %}" alt="pic" class="card-img">
-                        </div>
-                        <div class="card-content">
-                            <h2>Personal Website</h2>
-                            <p>What you are currently on right now. The first website that I made to display my Portfolio and help you get to know me a little better. Made using Django, HTML, CSS, and Javascript </p>
-                        </div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/portfolio-style.css' %}"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include 'base/navbar.html' %}
+    <div class="buttons" id="buttons">
+      <button class="btn active" id="work">Work</button>
+      <button class="btn" id="personal">Personal Projects</button>
+      <button class="btn" id="hackathons">Hackathons</button>
+      <button class="btn" id="tech">Technologies</button>
+    </div>
+    <div class="divs work current" id="div1" for="work"></div>
+    <div class="divs personal" id="div2" for="personal">
+      <div class="work-content" id="first-personal">
+        <div class="card-wrapper">
+          <div class="card">
+            <span class="card-overlay"></span>
+            <div class="card-image">
+              <img
+                src="{% static 'images/cat.png' %}"
+                alt="pic"
+                class="card-img"
+              />
             </div>
-            <div class="modal" id="modal-first-personal" for="first-personal">
-                <button class="close-button" id="close-first-personal"><i class="bx bx-x"></i></button>
-                <div class="modal-images">
-                    <i id="left" class="bx bx-chevron-left"></i>
-                    <ul class="carousel">
-                        <li class="modal-img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false" >
-                        </li>
-                        <li class="modal-img" >
-                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
-                        </li>
-                        <li class="modal-img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
-
-                        </li>
-                        <li class="modal-img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
-
-                        </li>
-                        <li class="modal-img">
-                            <img src="{% static 'images/cat1.png' %}" alt="cat" draggable="false">
-                        </li>
-                    </ul>
-                    <i id="right" class="bx bx-chevron-right"></i>
-                </div>
-                <!-- <div class="technologies">
-                        <h1>What was Used</h1>
-                        <ul>
-                            <li><p>Python</p></li>
-                            <li><p>Django</p></li>
-                            <li><p>HTML</p></li>
-                            <li><p>CSS</p></li>
-                            <li><p>JavaScript</p></li>
-                        </ul>
-                    </div> -->
+            <div class="card-content">
+              <h2>Personal Website</h2>
+              <p>
+                What you are currently on right now. The first website that I
+                made to display my Portfolio and help you get to know me a
+                little better. Made using Django, HTML, CSS, and Javascript.
+              </p>
             </div>
+          </div>
         </div>
-        <div class="divs hackathons" id="div3" for="hackathons">
+      </div>
+      <div class="modal" id="modal-first-personal" for="first-personal">
+        <button class="close-button" id="close-first-personal">
+          <i class="bx bx-x"></i>
+        </button>
+        <div class="modal-images">
+          <i id="left" class="bx bx-chevron-left"></i>
+          <ul class="carousel">
+            <li class="modal-img">
+              <img
+                src="{% static 'images/cat1.png' %}"
+                alt="cat"
+                draggable="false"
+              />
+            </li>
+            <li class="modal-img">
+              <img
+                src="{% static 'images/cat1.png' %}"
+                alt="cat"
+                draggable="false"
+              />
+            </li>
+            <li class="modal-img">
+              <img
+                src="{% static 'images/cat1.png' %}"
+                alt="cat"
+                draggable="false"
+              />
+            </li>
+            <li class="modal-img">
+              <img
+                src="{% static 'images/cat1.png' %}"
+                alt="cat"
+                draggable="false"
+              />
+            </li>
+            <li class="modal-img">
+              <img
+                src="{% static 'images/cat1.png' %}"
+                alt="cat"
+                draggable="false"
+              />
+            </li>
+          </ul>
+          <i id="right" class="bx bx-chevron-right"></i>
         </div>
-        <div class="divs tech" id="div4" for="tech">
+        <div class="modal-text-container">
+          <div class="technologies">
+            <h3>Made With :</h3>
+            <ul>
+              <li><p>Python</p></li>
+              <li><p>Django</p></li>
+              <li><p>HTML</p></li>
+              <li><p>CSS</p></li>
+              <li><p>JavaScript</p></li>
+            </ul>
+            <a
+              href="https://github.com/danny-zou18/Personal-Website"
+              target="_blank"
+              ><i class="bx bxl-github"></i>Github Repository</a
+            >
+          </div>
+          <div class="modal-description">
+            <h3>Description : </h3>
+            <p>
+                The first website that I have solo developed during the beginning of my Programming journey. 
+                Through this site, I hope to share my journey as a software developer, showcasing projects that 
+                reflect my passion and skills. Includes Professional Work, Personal Projects like this one, 
+                and achievements related to Hackathons. Uses (Django , Javascript) for the front-end and 
+                (HTML , CSS) for the back-end. 
+            </p>
+            <p> Your visit means a lot, and I'm excited to share this piece of my journey with you.</p>
         </div>
-
-        <div class="modal-overlay" id="modal-overlay"></div>
+        </div>
         
-        <script src="{% static 'js/portfolio.js' %}" async defer></script>
-        <!-- <script src="{% static 'js/portfolio-image-scroller.js' %}" async defer></script> -->
-    </body>
+      </div>
+    </div>
+    <div class="divs hackathons" id="div3" for="hackathons"></div>
+    <div class="divs tech" id="div4" for="tech"></div>
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <script src="{% static 'js/portfolio.js' %}" async defer></script>
+    <!-- <script src="{% static 'js/portfolio-image-scroller.js' %}" async defer></script> -->
+  </body>
 </html>
