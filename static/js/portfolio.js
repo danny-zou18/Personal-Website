@@ -31,6 +31,9 @@ const first_personal = document.getElementById("first-personal");
 const modal_first_personal = document.getElementById("modal-first-personal");
 const close_first_personal = document.getElementById("close-first-personal");
 
+/* Do this once with a for-loop for each card next time, loop through each project and then assign each with a indiviudal number,
+  then call a function with (i) as a argument to determine which modal matches the current card and also which close-button matches the modal */
+
 first_personal.addEventListener("click", () => {
   modal_first_personal.style.display = "block";
   modal_overlay.style.display = "block";
