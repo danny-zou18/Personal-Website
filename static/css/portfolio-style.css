@@ -284,10 +284,11 @@ body {
   margin-top: 15px;
   font-size: 30px;
   border-bottom: 3px solid rgb(49, 48, 48);
-}f
+}
 
 .modal .modal-text-container .modal-description p {
   margin-top: 15px;
   max-width: 90%;
   font-size: 17px;
+  text-indent: 35px;
 }
