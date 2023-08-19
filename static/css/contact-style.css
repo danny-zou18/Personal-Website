@@ -142,7 +142,7 @@ h1 {
 
 .box h1 {
   color: #fff;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 2vh;
   margin-top: 2vh;
   letter-spacing: 3px;
@@ -150,20 +150,21 @@ h1 {
 
 .box form .input-box {
   position: relative;
-  width: 500px;
+  width: 35vw;
+  /* width: 500px; */
   margin-bottom: 5vh;
 }
 .box form .input-box input {
   position: relative;
   width: 100%;
-  max-width: 480px;
+  max-width: 34vw;
   padding: 20px 0px 10px;
   background: transparent;
   outline: none;
   border: none;
   box-shadow: none;
   color: #23242a;
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: 100;
   letter-spacing: 1.5px;
   text-indent: 10px;
@@ -173,7 +174,7 @@ h1 {
 .box form .input-box textarea {
   position: relative;
   width: 100%;
-  min-height: 115px;
+  min-height: 18vh;
   color: #fff;
   font-size: 17px;
   letter-spacing: 2px;
@@ -192,7 +193,7 @@ h1 {
   padding: 10px 0px 10px;
   pointer-events: none;
   color: #8f8f8f;
-  font-size: 20px;
+  font-size: 1.3em;
   letter-spacing: 2px;
   transition: 0.5s;
 }
@@ -218,7 +219,7 @@ h1 {
 
 .box form .input-box input:valid ~ i,
 .box form .input-box input:focus ~ i {
-  height: 44px;
+  height: 6vh;
 }
 
 input[type="submit"] {
@@ -237,4 +238,48 @@ input[type="submit"]:active {
 }
 input[type="submit"]:hover {
   opacity: 0.8;
+}
+.successMessage {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28vw;
+  height: 12vh;
+  background-color: #efffff;
+  border: 3px solid black;
+  border-radius: 15px 8px 15px 15px;
+  z-index: 12;
+}
+.successMessage .close-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0.1px;
+  top: 0.1px;
+  max-height: 35px;
+  max-width: 35px;
+  height: auto;
+  color: black;
+  font-size: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.successMessage p {
+  font-size: 1.1em;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 11;
 }

@@ -22,9 +22,9 @@ body {
   margin-top: 7vh;
 }
 .main-container .image-wrapper {
-  width: 28rem;
-  height: 32rem;
-  margin-left: 3rem;
+  width: 31vw;
+  height: 71vh;
+  margin-left: 3.2vw;
 }
 .main-container .image-wrapper img {
   width: 100%;
@@ -34,26 +34,30 @@ body {
 }
 .main-container .content-container {
   margin-left: 3rem;
-  background-color: blue;
-  width: 46rem;
-  height: 28rem;
+  background-color: rgb(154, 154, 130);
+  width: 51vw;
+  height: 62vh;
   color: white;
   padding: 10px 25px 10px 25px;
   border-radius: 35px 8px 35px 35px;
 }
+
 .main-container .content-container h1 {
   display: inline-block;
   border-bottom: 3px solid #2d303d;
   letter-spacing: 2px;
   font-size: 3rem;
 }
-.main-container .content-container .buttons button{
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: ;
-  margin-left: 15px;
+.main-container .text-container {
+  margin-top: 2vh;
+  overflow-y: scroll;
+  max-height: 68%;
+  border: 3px solid black;
+  padding: 0 10px 10px 10px;
+  border-radius: 25px 8px 25px 25px;
 }
-.main-container .content-container .buttons button:first-child {
-  margin-left: 0;
+.main-container .text-container p {
+  margin-top: 10px;
+  text-indent: 40px;
+  font-size: 1.05em;
 }

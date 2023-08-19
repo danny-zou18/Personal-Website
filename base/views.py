@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Contact
 from django.http import HttpResponse
+from django.core.mail import send_mail
 # Create your views here.
 
 def home(request):
@@ -26,8 +27,8 @@ def contact(request):
         contact.message=message
 
         contact.save()
-        return HttpResponse("<h1>Thanks for reaching out!</h1>")
     return render(request, "base/contact.html")
 
 def portfolio(request):
     return render(request, "base/portfolio.html")
+    

@@ -1,29 +1,55 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/about-style.css' %}">
-    </head>
-    <body>
-        {% include 'base/navbar.html' %}
-        <div class="main-container">
-            <div class="image-wrapper">
-                <img src="{% static 'images/cat2.png' %}" alt="cat">
-            </div>
-            <div class="content-container">
-                <h1>ABOUT</h1>
-                <div class="buttons" id="buttons">
-                    <button class="btn active" id="about-me">About Me</button>
-                    <button class="btn" id="education">Education</button>
-                    <button class="btn" id="hobbies">Hobbies</button>
-                </div>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/about-style.css' %}"
+    />
+  </head>
+  <body>
+    {% include 'base/navbar.html' %}
+    <div class="main-container">
+      <div class="image-wrapper">
+        <img src="{% static 'images/cat2.png' %}" alt="cat" />
+      </div>
+      <div class="content-container">
+        <h1>ABOUT</h1>
+        <div class="text-container">
+          <p>
+            As you may know now, I am Danny Zou, a dedicated and ambitious individual currently
+            pursuing my education at Rensselaer Polytechnic Institute. As a
+            college student, I'm immersing myself in the exciting world of
+            technology and learning to harness its power for creative solutions.
+            I'm not just a student, though—I'm also a software developer and an
+            avid rock climber.
+          </p>
+          <p>
+            Being at the crossroads of my academic journey and my passion for
+            programming, I recognize that this section of my personal corner on
+            the web will evolve with me over time. Each update will reflect my
+            growth as a developer, student, and individual navigating the
+            complexities of the tech landscape. As I venture through this phase
+            of my life, I understand that change is the only constant, and I'm
+            excited to see where my explorations and endeavors will take me.
+          </p>
+          <p>
+            While I might not have a well-defined path in programming just yet,
+            I'm fueled by determination and a thirst for knowledge. The world of
+            coding is vast, and I'm diving headfirst into the maze, eagerly
+            seeking the direction that resonates most with me. With each line of
+            code and every project undertaken, I'm steadily shaping my identity
+            as a developer and a thinker.
+          </p>
         </div>
-        <script src="" async defer></script>
-    </body>
+      </div>
+    </div>
+    <script src="" async defer></script>
+  </body>
 </html>
