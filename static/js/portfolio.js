@@ -27,60 +27,122 @@ for (let i = 0; i < btns.length; i++) {
 
 const modal_overlay = document.getElementById("modal-overlay");
 
-const first_personal = document.getElementById("first-personal");
-const modal_first_personal = document.getElementById("modal-first-personal");
-const close_first_personal = document.getElementById("close-first-personal");
+const personal_projects = document.getElementsByClassName("personal-cards");
 
-/* Do this once with a for-loop for each card next time, loop through each project and then assign each with a indiviudal number,
-  then call a function with (i) as a argument to determine which modal matches the current card and also which close-button matches the modal */
+function createEventListener(index) {
+  return () => {
+    console.log("Clicked card with index:", index);
+    const modal = document.getElementById(`modal-personal-${index}`);
+    modal.style.display = "block";
+    modal_overlay.style.display = "block";
 
-first_personal.addEventListener("click", () => {
-  modal_first_personal.style.display = "block";
-  modal_overlay.style.display = "block";
-
-  var carousel = document.querySelector(".carousel");
-  var arrowBtns = document.querySelectorAll(".modal-images i");
-  const addPixels = 12;
-  var ImageWidth = carousel.querySelector(".modal-img").offsetWidth;
-  const firstImageWidth = ImageWidth + addPixels;
-
-  let isDragging = false,
+    var carousel = document.querySelector(".carousel");
+    var arrowBtns = document.querySelectorAll(".modal-images i");
+    const addPixels = 12;
+    var ImageWidth = carousel.querySelector(".modal-img").offsetWidth;
+    const firstImageWidth = ImageWidth + addPixels;
+    
+    let isDragging = false,
     startX,
     startScrollLeft;
 
-  arrowBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (btn.id === "left") {
-        console.log("left");
-        console.log(ImageWidth);
-        // Scroll left by one image width
-        carousel.scrollLeft -= firstImageWidth;
-      } else if (btn.id === "right") {
-        console.log("right");
-        console.log(firstImageWidth);
-        // Scroll right by one image width
-        carousel.scrollLeft += firstImageWidth;
-      }
+    arrowBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (btn.id === "left") {
+          console.log("left");
+          console.log(ImageWidth);
+          // Scroll left by one image width
+          carousel.scrollLeft -= firstImageWidth;
+        } else if (btn.id === "right") {
+          console.log("right");
+          console.log(firstImageWidth);
+          // Scroll right by one image width
+          carousel.scrollLeft += firstImageWidth;
+        }
+      });
     });
-  });
-  carousel.addEventListener("mousedown", (e) => {
-    isDragging = true;
-    carousel.classList.add("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft;
-  });
-  carousel.addEventListener("mouseup", () => {
-    isDragging = false;
-    carousel.classList.remove("dragging");
-  });
-  carousel.addEventListener("mousemove", (e) => {
-    if (!isDragging) {
-      return;
-    }
-    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-  });
-});
-close_first_personal.addEventListener("click", () => {
-  modal_first_personal.style.display = "none";
-  modal_overlay.style.display = "none";
-});
+    carousel.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      carousel.classList.add("dragging");
+      startX = e.pageX;
+      startScrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener("mouseup", () => {
+      isDragging = false;
+      carousel.classList.remove("dragging");
+    });
+    carousel.addEventListener("mousemove", (e) => {
+      if (!isDragging) {
+        return;
+      }
+      carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    });
+    const close_button = document.getElementById(`close-personal-${index}`);
+    close_button.addEventListener("click", () => {
+      modal.style.display = "none";
+      modal_overlay.style.display = "none";
+    })
+  };
+}
+
+for (let i = 0; i < personal_projects.length; i++){
+  personal_projects[i].addEventListener("click", createEventListener(i));
+}
+
+// const first_personal = document.getElementById("first-personal");
+// const modal_first_personal = document.getElementById("modal-first-personal");
+// const close_first_personal = document.getElementById("close-first-personal");
+
+// /* Do this once with a for-loop for each card next time, loop through each project and then assign each with a indiviudal number,
+//   then call a function with (i) as a argument to determine which modal matches the current card and also which close-button matches the modal */
+
+// first_personal.addEventListener("click", () => {
+//   modal_first_personal.style.display = "block";
+//   modal_overlay.style.display = "block";
+
+//   var carousel = document.querySelector(".carousel");
+//   var arrowBtns = document.querySelectorAll(".modal-images i");
+//   const addPixels = 12;
+//   var ImageWidth = carousel.querySelector(".modal-img").offsetWidth;
+//   const firstImageWidth = ImageWidth + addPixels;
+
+//   let isDragging = false,
+//     startX,
+//     startScrollLeft;
+
+//   arrowBtns.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       if (btn.id === "left") {
+//         console.log("left");
+//         console.log(ImageWidth);
+//         // Scroll left by one image width
+//         carousel.scrollLeft -= firstImageWidth;
+//       } else if (btn.id === "right") {
+//         console.log("right");
+//         console.log(firstImageWidth);
+//         // Scroll right by one image width
+//         carousel.scrollLeft += firstImageWidth;
+//       }
+//     });
+//   });
+//   carousel.addEventListener("mousedown", (e) => {
+//     isDragging = true;
+//     carousel.classList.add("dragging");
+//     startX = e.pageX;
+//     startScrollLeft = carousel.scrollLeft;
+//   });
+//   carousel.addEventListener("mouseup", () => {
+//     isDragging = false;
+//     carousel.classList.remove("dragging");
+//   });
+//   carousel.addEventListener("mousemove", (e) => {
+//     if (!isDragging) {
+//       return;
+//     }
+//     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+//   });
+// });
+// close_first_personal.addEventListener("click", () => {
+//   modal_first_personal.style.display = "none";
+//   modal_overlay.style.display = "none";
+// });
