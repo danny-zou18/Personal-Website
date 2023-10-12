@@ -64,6 +64,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  
 }
 .personal .card {
   display: flex;
@@ -76,6 +77,7 @@ body {
   max-width: 25.4vw;
   border: 5px solid black;
   background-color: #efffff;
+  margin-left: 5px;
 }
 .personal .card-image {
   position: relative;
@@ -93,9 +95,11 @@ body {
 }
 .personal .card-content {
   margin-top: 10px;
+  overflow: auto;
+  max-height: 10%;
 }
 .personal h2 {
-  margin-top: 25px;
+  margin-top: 8px;
   margin-bottom: 5px;
   font-weight: 600;
 }
